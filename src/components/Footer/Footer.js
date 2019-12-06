@@ -8,6 +8,7 @@ class Footer extends Component {
   render() {
     const { questionsAllCount, questionsRightCount, poll } = this.props
     const percent = Math.round((questionsRightCount / questionsAllCount) * 100) ;
+    if(isNaN(percent)) percent = 0;
 
     let passedTitleElement = <div></div>
     if(+poll.percent_response !== 0) {
