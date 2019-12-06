@@ -1,0 +1,37 @@
+.question {
+  margin-bottom: 40px;
+}
+
+.question__row {
+  display: grid;
+  grid-template-columns: auto 70px 70px;
+  grid-column-gap: 10px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.question__cell {
+  padding: 5px;
+}
+
+.question__row_title {
+  background: #e0e0e0;
+}
+
+.question__cell_title {
+  font-size: 16px;
+}
+
+.question__cell_small {
+  font-size: 12px;
+}
+
+
+.question__row_success {
+  background-color: #e0ffb9;
+  border-bottom-color: #e0ffb9 !important;
+}
+
+.question__row_fail {
+  background-color: #ffbebe;
+  border-bottom-color: #ffbebe !important;
+}
