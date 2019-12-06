@@ -6,6 +6,7 @@ export const fetchQuestions = (userId, scheduleId) => async (dispatch, getState)
     type: FETCH_QUESTIONS + START,
   })
   return fetch(`http://webservices.cez.ttmf.ru/poll/get_poll_result_full.ashx?user_id=${userId}&schedule_id=${scheduleId}`, { 
+      crossDomain:true,
     })
     .then(res => res.json())
     .then(data => {

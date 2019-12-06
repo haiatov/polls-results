@@ -21,8 +21,7 @@ class Footer extends Component {
     return(
       <div className="footer">
         <div>Вопросов в тесте: <b>{questionsAllCount}</b></div>
-        <div>Правильных ответов: <b>{questionsRightCount}</b></div>
-        <div>Процент прохождения: <b>{percent}</b>%</div>
+        <div>Правильных ответов: <b>{questionsRightCount}</b> (<b>{percent}</b>%)</div>
         {passedTitleElement}
       </div> 
     )
