@@ -1,5 +1,5 @@
 import { FETCH_QUESTIONS } from '../../constants/actions'
-import { START, SUCCESS, FAIL } from '../../constants'
+import { SUCCESS } from '../../constants'
 
 const initialState = {
   percent_response: 100,
@@ -9,10 +9,11 @@ const initialState = {
 }
 
 export default function pollReducer(state = initialState, action) {
-  switch(action.type){
+  switch (action.type) {
     case FETCH_QUESTIONS + SUCCESS:
+      console.log(33);
       const poll = action.payload.poll;
-      if(poll) {
+      if (poll) {
         return poll
       } else {
         return state;

@@ -7,24 +7,22 @@ import { questionsAllCount, questionsRightCount } from '../../store/selectors/qu
 class Footer extends Component {
   render() {
     const { questionsAllCount, questionsRightCount, poll } = this.props
-    let percent = Math.round((questionsRightCount / questionsAllCount) * 100) ;
-    if(isNaN(percent)) percent = 0;
+    let percent = Math.round((questionsRightCount / questionsAllCount) * 100);
+    if (isNaN(percent)) percent = 0;
 
     let passedTitleElement = <div></div>
-    if(+poll.percent_response !== 0) {
-      if(percent >= poll.percent_response) {
-        passedTitleElement = <h3 class="footer__success">Вы прошли тест!</h3>
-      }else {
-        passedTitleElement = <h3 class="footer__fail">Вы не прошли тест!</h3>
-      }
+    if (+poll.result_id === 1) {
+      passedTitleElement = <h3 className="footer__success">☑ {poll.result}</h3>
+    } else {
+      passedTitleElement = <h3 className="footer__fail">☒ {poll.result}</h3>
     }
 
-    return(
+    return (
       <div className="footer">
         <div>Вопросов в тесте: <b>{questionsAllCount}</b></div>
-        <div>Правильных ответов: <b>{questionsRightCount}</b> (<b>{percent}</b>%)</div>
+        <div>Вы ответили правильно на: <b>{questionsRightCount}</b> (Необходимо ответить на: <b>{poll.fixed_answer}</b>)</div>
         {passedTitleElement}
-      </div> 
+      </div>
     )
   }
 }

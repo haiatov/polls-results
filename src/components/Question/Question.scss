@@ -1,16 +1,29 @@
+/* autoprefixer grid: autoplace */
+
 .question {
   margin-bottom: 40px;
 }
 
 .question__row {
   display: grid;
-  grid-template-columns: auto 70px 70px;
-  grid-column-gap: 10px;
+  grid-template-columns: 1fr 70px 70px;
   border-bottom: 1px dashed #e0e0e0;
 }
 
 .question__cell {
   padding: 5px;
+}
+
+.question__cell:nth-child(1){
+  grid-column: 1;
+}
+
+.question__cell:nth-child(2){
+  grid-column: 2;
+}
+
+.question__cell:nth-child(3){
+  grid-column: 3;
 }
 
 .question__row_title {

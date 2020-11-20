@@ -2,11 +2,14 @@
   "name": "matching",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cez.ttmf.ru/polls/results",
   "dependencies": {
     "@ag-grid-community/react": "^22.0.0",
     "@ag-grid-enterprise/all-modules": "^22.0.0",
     "classnames": "^2.2.6",
+    "es6-promise": "^4.2.8",
     "react": "^16.12.0",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
     "react-router": "^5.1.2",
@@ -26,14 +29,10 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "since 2010"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "since 2010"
     ]
   },
   "devDependencies": {

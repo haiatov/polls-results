@@ -4,7 +4,7 @@ import { START, SUCCESS, FAIL } from '../../constants'
 const initialState = []
 
 export default function questionsReducer(state = initialState, action) {
-  switch(action.type){
+  switch (action.type) {
     case FETCH_QUESTIONS + START:
       return state;
     case FETCH_QUESTIONS + SUCCESS:

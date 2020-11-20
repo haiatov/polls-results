@@ -1,18 +1,23 @@
-import React, { Component } from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import 'react-app-polyfill/ie11';
 
-import QuestionsList from '../QuestionsList/'; 
+import React, { Component } from 'react'
+import { BrowserRouter, Route } from 'react-router-dom';
+
+
+import QuestionsList from '../QuestionsList/';
 import Header from '../Header/';
 import Footer from '../Footer/';
+
 
 class App extends Component {
 
   render() {
+
     return (
       <div>
         <Header />
-        <BrowserRouter>
-          <Route exact path='/:userId/:scheduleId' component={QuestionsList}/>
+        <BrowserRouter basename={'/polls/results'}>
+          <Route exact path='/:resultId' component={QuestionsList} />
         </BrowserRouter>
         <Footer />
       </div>
