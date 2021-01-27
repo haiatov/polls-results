@@ -8,6 +8,7 @@ class Question extends Component {
   render() {
     const question = this.props.question;
     const name = question.question;
+    const index = this.props.index + 1;
 
     const inputType = (+question.type_id === 10) ? "checkbox" : "radio";
 
@@ -18,9 +19,9 @@ class Question extends Component {
     return (
       <div className="question">
         <div className={cn('question__row', 'question__row_title', questionRowClass)}>
-          <div className="question__cell question__cell_title">{name}</div>
           <div className="question__cell question__cell_small">Ваш<br />ответ</div>
           <div className="question__cell question__cell_small">Верный<br />ответ</div>
+          <div className="question__cell question__cell_title">{index}. {name}</div>
         </div>
 
         {answersElements}

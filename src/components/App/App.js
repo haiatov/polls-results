@@ -17,7 +17,7 @@ class App extends Component {
       <div>
         <Header />
         <BrowserRouter basename={'/polls/results'}>
-          <Route exact path='/:resultId' component={QuestionsList} />
+          <Route exact path='/:guid' component={QuestionsList} />
         </BrowserRouter>
         <Footer />
       </div>

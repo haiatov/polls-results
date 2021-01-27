@@ -6,11 +6,11 @@ import { fetchQuestions } from '../../store/actions/questionsActions.js'
 
 class QuestionsList extends Component {
   componentDidMount() {
-    this.props.fetchQuestions(this.props.match.params.resultId);
+    this.props.fetchQuestions(this.props.match.params.guid);
   }
 
   render() {
-    const questionsElements = this.props.questions.map(item => <Question key={item.question_id} question={item} />)
+    const questionsElements = this.props.questions.map((item, index) => <Question key={item.question_id} question={item} index={index} />)
     return (
       <div>
         {questionsElements}

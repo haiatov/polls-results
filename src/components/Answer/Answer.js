@@ -9,11 +9,15 @@ class Answer extends Component {
     const rightAsnwerChecked = (answer.right_answer.toLowerCase() === "true") ? "checked" : "";
     const inputType = this.props.inputType;
 
-    return(
-      <div className="question__row">
-        <div className="question__cell">{name}</div>
+    let className = "question__row";
+    if (rightAsnwerChecked === "checked") className += " answer__row_success";
+    if (rightAsnwerChecked !== "checked" && userAnswerChecked === "checked") className += " answer__row_fail";
+
+    return (
+      <div className={className}>
         <div className="question__cell"><input type={inputType} checked={userAnswerChecked} /></div>
-        <div className="question__cell"><input type={inputType} checked={rightAsnwerChecked} /> </div>
+        <div className="question__cell"><input type={inputType} checked={rightAsnwerChecked} /></div>
+        <div className="question__cell">{name}</div>
       </div>
     )
   }

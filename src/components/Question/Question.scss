@@ -6,7 +6,7 @@
 
 .question__row {
   display: grid;
-  grid-template-columns: 1fr 70px 70px;
+  grid-template-columns: 50px 60px 1fr;
   border-bottom: 1px dashed #e0e0e0;
 }
 
@@ -31,7 +31,10 @@
 }
 
 .question__cell_title {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .question__cell_small {
@@ -47,4 +50,12 @@
 .question__row_fail {
   background-color: #ffbebe;
   border-bottom-color: #ffbebe !important;
+}
+
+.answer__row_success {
+  background-color: #eeffd9;
+}
+
+.answer__row_fail {
+  background-color: #ffdfdf;
 }

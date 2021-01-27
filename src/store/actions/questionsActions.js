@@ -1,11 +1,11 @@
 import { FETCH_QUESTIONS } from '../../constants/actions.js'
 import { START, SUCCESS, FAIL } from '../../constants'
 
-export const fetchQuestions = (resultId) => async (dispatch, getState) => {
+export const fetchQuestions = (guid) => async (dispatch, getState) => {
   dispatch({
     type: FETCH_QUESTIONS + START,
   })
-  return fetch(`https://cez.ttmf.ru/api/PollResultInfo?result_id=${resultId}`, {
+  return fetch(`https://cez.ttmf.ru/api/PollResultInfo?guid=${guid}`, {
     crossDomain: true,
     headers: new Headers({
       'Authorization': 'Basic ' + btoa('polls-results:98437f86-7f3d-4354-abdc-4efa18d07d5f'),
